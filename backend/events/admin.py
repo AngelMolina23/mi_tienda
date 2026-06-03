@@ -1,9 +1,31 @@
 from django.contrib import admin
-from .models import Event
+from .models import Event, EventReservation
 
 
-@admin.register(Event)
-class EventAdmin(admin.ModelAdmin):
-    list_display = ("name", "price", "event_date", "location", "capacity", "status")
-    list_filter = ("status", "event_date")
-    search_fields = ("name", "location")
+
+
+
+@admin.register(EventReservation)
+class EventReservationAdmin(admin.ModelAdmin):
+    list_display = (
+        "name",
+        "email",
+        "phone",
+        "event_date",
+        "event_type",
+        "user",
+        "created_at"
+    )
+
+    list_filter = (
+        "event_type",
+        "event_date",
+        "created_at"
+    )
+
+    search_fields = (
+        "name",
+        "email",
+        "phone",
+        "event_type"
+    )

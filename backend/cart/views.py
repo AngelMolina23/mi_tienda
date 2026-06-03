@@ -1,6 +1,7 @@
-from rest_framework import viewsets, status
+from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+from rest_framework import status
 
 from .models import CartItem
 from .serializers import CartItemSerializer
@@ -17,25 +18,19 @@ class CartItemViewSet(viewsets.ModelViewSet):
         product_id = request.data.get("product")
         quantity = int(request.data.get("quantity", 1))
 
-        if quantity <= 0:
-            return Response(
-                {"detail": "La cantidad debe ser mayor a 0."},
-                status=status.HTTP_400_BAD_REQUEST
-            )
-
-        cart_item = CartItem.objects.filter(
+        item, created = CartItem.objects.get_or_create(
             user=request.user,
-            product_id=product_id
-        ).first()
+            product_id=product_id,
+            defaults={"quantity": quantity}
+        )
 
-        if cart_item:
-            cart_item.quantity += quantity
-            cart_item.save()
-            serializer = self.get_serializer(cart_item)
-            return Response(serializer.data, status=status.HTTP_200_OK)
+        if not created:
+            item.quantity += quantity
+            item.save()
 
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        serializer.save(user=request.user)
+        serializer = self.get_serializer(item)
 
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(
+            serializer.data,
+            status=status.HTTP_201_CREATED
+        )
