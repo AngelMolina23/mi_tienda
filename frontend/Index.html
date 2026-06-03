@@ -1,98 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>DJ NIGHT</title>
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <title>DJ GUSTAVO</title>
 
-    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+    href="css/style.css">
+
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- ANIMATE CSS -->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-   <nav class="navbar">
+    <nav class="navbar">
 
-    <a href="index.html" class="logo">
-        DJ NIGHT
-    </a>
+        <a href="index.html" class="logo">
+            DJ GUSTAVO
+        </a>
 
-    <ul class="nav-links">
+        <ul class="nav-links">
 
-        <li>
-            <a href="index.html">
-                Inicio
-            </a>
-        </li>
+            <li><a href="index.html">Inicio</a></li>
 
-        <li>
-            <a href="servicios.html">
-                Servicios
-            </a>
-        </li>
+            <li><a href="servicios.html">Servicios</a></li>
 
-        <li>
-            <a href="galeria.html">
-                Galería
-            </a>
-        </li>
+            <li><a href="galeria.html">Galería</a></li>
 
-        <li>
-            <a href="reservas.html">
-                Reservas
-            </a>
-        </li>
+            <li><a href="reservas.html">Reservas</a></li>
 
-        <li>
-            <a href="contacto.html">
-                Contacto
-            </a>
-        </li>
+            <li><a href="productos.html">Tienda</a></li>
 
-    </ul>
+            <li><a href="carrito.html">Carrito</a></li>
 
-</nav>
+            <li><a href="contacto.html">Contacto</a></li>
 
-        <button class="btn-neon">
-            Reservar
-        </button>
+            <li id="loginItem">
+
+                <a href="login.html" class="login-btn">
+                    <i class="fas fa-user"></i>
+                    Iniciar Sesión
+                </a>
+
+            </li>
+
+            <li id="userItem" style="display:none;">
+
+                <a href="#">
+                    <i class="fas fa-user-check"></i>
+                    <span id="usernameDisplay"></span>
+                </a>
+
+            </li>
+
+            <li id="logoutItem" style="display:none;">
+
+                <a href="#" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Cerrar Sesión
+                </a>
+
+            </li>
+
+        </ul>
 
     </nav>
 
-    <!-- HERO -->
     <section class="hero">
 
         <div class="hero-text animate__animated animate__fadeInLeft">
 
-            <h1>DJ </h1>
+            <h1>
+                DJ GUSTAVO
+            </h1>
 
             <h2>
-                Feel The Beat
+                Música, luces y energía para tu evento
             </h2>
 
             <p>
-                Música, luces y energía para eventos inolvidables.
+                Servicio profesional de DJ para bodas, XV años, cumpleaños,
+                fiestas privadas y eventos empresariales. También contamos
+                con tienda de equipo y mobiliario para DJ.
             </p>
 
             <div class="hero-buttons">
 
-                <button class="btn-neon">
-                    Contratar
-                </button>
+                <a href="reservas.html">
 
-                <button class="btn-outline">
-                    Ver Eventos
-                </button>
+                    <button class="btn-neon">
+                        <i class="fas fa-calendar-check"></i>
+                        Reservar Evento
+                    </button>
+
+                </a>
+
+                <a href="productos.html">
+
+                    <button class="btn-outline">
+                        <i class="fas fa-cart-shopping"></i>
+                        Ver Tienda
+                    </button>
+
+                </a>
 
             </div>
 
@@ -108,11 +128,10 @@
 
     </section>
 
-    <!-- SERVICIOS -->
     <section class="services-section">
 
         <h2 class="section-title">
-            Servicios
+            Servicios Principales
         </h2>
 
         <div class="services">
@@ -124,7 +143,21 @@
                 <h3>Eventos Privados</h3>
 
                 <p>
-                    Música profesional para fiestas y eventos.
+                    Música personalizada para cumpleaños, fiestas familiares
+                    y celebraciones especiales.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-champagne-glasses"></i>
+
+                <h3>Bodas y XV Años</h3>
+
+                <p>
+                    Ambiente elegante, divertido y profesional para momentos
+                    únicos e inolvidables.
                 </p>
 
             </div>
@@ -136,19 +169,8 @@
                 <h3>Luces y Audio</h3>
 
                 <p>
-                    Equipo profesional de sonido e iluminación.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <i class="fa-solid fa-sliders"></i>
-
-                <h3>DJ Profesional</h3>
-
-                <p>
-                    Mezclas en vivo y experiencia premium.
+                    Equipo de sonido e iluminación para transformar cualquier
+                    espacio en una gran pista de baile.
                 </p>
 
             </div>
@@ -157,7 +179,128 @@
 
     </section>
 
-    <!-- CONTACTO -->
+    <section class="services-section">
+
+        <h2 class="section-title">
+            Tienda DJ
+        </h2>
+
+        <div class="services">
+
+            <div class="card">
+
+                <i class="fa-solid fa-table"></i>
+
+                <h3>Mesas para DJ</h3>
+
+                <p>
+                    Mobiliario práctico y profesional para presentaciones,
+                    eventos y estudios.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-sliders"></i>
+
+                <h3>Controladoras</h3>
+
+                <p>
+                    Equipo ideal para mezclar música con calidad profesional.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-headphones"></i>
+
+                <h3>Accesorios DJ</h3>
+
+                <p>
+                    Audífonos, bases, luces y complementos para mejorar
+                    tu setup.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="hero-buttons" style="margin-top:40px;">
+
+            <a href="productos.html">
+
+                <button class="btn-neon">
+                    <i class="fas fa-store"></i>
+                    Entrar a la Tienda
+                </button>
+
+            </a>
+
+            <a href="carrito.html">
+
+                <button class="btn-outline">
+                    <i class="fas fa-cart-shopping"></i>
+                    Ver Carrito
+                </button>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="services-section">
+
+        <h2 class="section-title">
+            ¿Por qué elegirnos?
+        </h2>
+
+        <div class="services">
+
+            <div class="card">
+
+                <i class="fa-solid fa-star"></i>
+
+                <h3>Experiencia</h3>
+
+                <p>
+                    Presentaciones con energía, profesionalismo y selección
+                    musical adaptada al tipo de evento.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-volume-high"></i>
+
+                <h3>Sonido Profesional</h3>
+
+                <p>
+                    Calidad de audio para eventos pequeños, medianos y grandes.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3>Atención Personalizada</h3>
+
+                <p>
+                    Planeación previa para que la música y el ambiente se
+                    adapten a tus gustos.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
     <section class="contact">
 
         <h2>
@@ -165,49 +308,58 @@
         </h2>
 
         <p>
-            Reserva tu fecha ahora mismo.
+            Reserva tu fecha, solicita información o pregunta por paquetes disponibles.
         </p>
 
-        <button class="btn-neon">
-            Enviar Mensaje
-        </button>
+        <a href="contacto.html">
+
+            <button class="btn-neon">
+                <i class="fas fa-envelope"></i>
+                Enviar Mensaje
+            </button>
+
+        </a>
 
     </section>
 
-    <!-- JS -->
+    <button id="topBtn">
+        ↑
+    </button>
+
+    <footer class="footer">
+
+        <h3>
+            DJ GUSTAVO
+        </h3>
+
+        <p>
+            Música • Eventos • Tienda DJ • Sonido • Iluminación
+        </p>
+
+        <div class="socials">
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+        <p class="copy">
+            © 2026 DJ GUSTAVO | Todos los derechos reservados.
+        </p>
+
+    </footer>
+
     <script src="js/app.js"></script>
 
-    <button id="topBtn">
-    ↑
-</button>
-<footer class="footer">
-
-    <h3>DJ NIGHT</h3>
-
-    <p>
-        Música • Eventos • Experiencias
-    </p>
-
-    <div class="socials">
-
-        <a href="#">
-            <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="#">
-            <i class="fab fa-tiktok"></i>
-        </a>
-
-        <a href="#">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-
-    </div>
-
-    <p class="copy">
-        © 2026 DJ NIGHT
-    </p>
-
-</footer>
 </body>
+
 </html>

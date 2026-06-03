@@ -8,7 +8,7 @@
     <meta name="viewport"
     content="width=device-width, initial-scale=1.0">
 
-    <title>Galería | DJ GUSTAVO</title>
+    <title>Carrito | DJ GUSTAVO</title>
 
     <link rel="stylesheet"
     href="css/style.css">
@@ -19,8 +19,6 @@
 </head>
 
 <body>
-
-    <!-- NAVBAR -->
 
     <nav class="navbar">
 
@@ -75,96 +73,56 @@
 
     </nav>
 
-    <!-- GALERIA -->
-
     <section class="services-section">
 
         <h1 class="section-title">
-            Galería de Eventos
+            Mi Carrito
         </h1>
 
         <p class="gallery-description">
-            Momentos llenos de música, luces y energía en eventos especiales.
+            Revisa tus productos antes de finalizar la compra.
         </p>
-
-        <div class="gallery">
-
-            <img
-            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop"
-            alt="Evento con DJ y público">
-
-            <img
-            src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1200&auto=format&fit=crop"
-            alt="Festival con luces">
-
-            <img
-            src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?q=80&w=1200&auto=format&fit=crop"
-            alt="Concierto con ambiente nocturno">
-
-            <img
-            src="https://images.unsplash.com/photo-1571266028243-d220c9f5ab00?q=80&w=1200&auto=format&fit=crop"
-            alt="DJ tocando en evento">
-
-            <img
-            src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1200&auto=format&fit=crop"
-            alt="Equipo profesional DJ">
-
-            <img
-            src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop"
-            alt="Evento con luces y escenario">
-
-        </div>
-
-    </section>
-
-    <!-- TIPOS DE EVENTOS -->
-
-    <section class="services-section">
-
-        <h2 class="section-title">
-            Eventos donde llevamos el ambiente
-        </h2>
 
         <div class="services">
 
             <div class="card">
 
-                <i class="fa-solid fa-champagne-glasses"></i>
+                <i class="fas fa-cart-shopping"></i>
 
                 <h3>
-                    Bodas
+                    Productos Seleccionados
                 </h3>
 
                 <p>
-                    Música elegante, momentos especiales y ambiente para bailar toda la noche.
+                    Aquí aparecerán los productos que agregaste desde la tienda.
                 </p>
 
             </div>
 
             <div class="card">
 
-                <i class="fa-solid fa-cake-candles"></i>
+                <i class="fas fa-shield-alt"></i>
 
                 <h3>
-                    XV Años
+                    Compra Segura
                 </h3>
 
                 <p>
-                    Una experiencia moderna, divertida y llena de energía para celebrar en grande.
+                    Tu carrito está asociado a tu cuenta de usuario.
                 </p>
 
             </div>
 
             <div class="card">
 
-                <i class="fa-solid fa-users"></i>
+                <i class="fas fa-box"></i>
 
                 <h3>
-                    Fiestas Privadas
+                    Pedido Registrado
                 </h3>
 
                 <p>
-                    Cumpleaños, reuniones, aniversarios y eventos personalizados.
+                    Al finalizar la compra, el pedido se guardará en el sistema.
                 </p>
 
             </div>
@@ -173,47 +131,73 @@
 
     </section>
 
-    <!-- CTA -->
+    <section class="services-section">
+
+        <h2 class="section-title">
+            Productos en el Carrito
+        </h2>
+
+        <div id="cartContainer" class="cart-container">
+
+            <div class="card">
+                <h3>Cargando carrito...</h3>
+                <p>Espera un momento.</p>
+            </div>
+
+        </div>
+
+        <div class="cart-total">
+
+            <h2 id="cartTotal">
+                Total: $0 MXN
+            </h2>
+
+            <div class="hero-buttons">
+
+                <a href="productos.html">
+
+                    <button class="btn-outline">
+                        <i class="fas fa-store"></i>
+                        Seguir Comprando
+                    </button>
+
+                </a>
+
+                <button class="btn-neon" onclick="hacerCheckout()">
+                    <i class="fas fa-credit-card"></i>
+                    Finalizar Compra
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
 
     <section class="contact">
 
         <h2>
-            ¿Quieres vivir esta experiencia?
+            ¿Necesitas ayuda?
         </h2>
 
         <p>
-            Agenda tu evento con DJ GUSTAVO y crea un ambiente inolvidable.
+            Si tienes dudas sobre algún producto, puedes contactarnos antes de finalizar la compra.
         </p>
 
-        <div class="hero-buttons">
+        <a href="contacto.html">
 
-            <a href="reservas.html">
+            <button class="btn-outline">
+                <i class="fas fa-envelope"></i>
+                Contactar
+            </button>
 
-                <button class="btn-neon">
-                    <i class="fas fa-calendar-check"></i>
-                    Reservar Evento
-                </button>
-
-            </a>
-
-            <a href="productos.html">
-
-                <button class="btn-outline">
-                    <i class="fas fa-store"></i>
-                    Ver Tienda
-                </button>
-
-            </a>
-
-        </div>
+        </a>
 
     </section>
 
     <button id="topBtn">
         ↑
     </button>
-
-    <!-- FOOTER -->
 
     <footer class="footer">
 
@@ -248,6 +232,7 @@
     </footer>
 
     <script src="js/app.js"></script>
+    <script src="js/carrito.js"></script>
 
 </body>
 
